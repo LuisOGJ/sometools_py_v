@@ -6,7 +6,8 @@ app = FastAPI(title="API tools", description="Some tools for daily use", version
 
 # Registry EndPoints
 app.include_router(router)
+# uvicorn main:app --reload
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="localhost", port="8000")
+#if __name__ == "__main__":
+#    import uvicorn
+#    uvicorn.run(app, host="localhost", port="8000")

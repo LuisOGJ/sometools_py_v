@@ -1,11 +1,13 @@
 from fastapi import APIRouter, Depends
 from fastapi.exceptions import HTTPException
+from core.services import *
 
 router = APIRouter(prefix="/passGenerator")
 
 @router.get("/", tags=["passGenerator"])
 def generatePass():
-    return 5
+    passDTO = generatePassService(True, True, True, 20)
+    return passDTO
 
 
 @router.get("/1", tags=["passGenerator"])
